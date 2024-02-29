@@ -6,3 +6,4 @@
 
 ## :pushpin: Contents by weeks (Practicum):
 ### [:one: Structs, Padding and size, Unions, Enums](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2001)
+### [:two: Text and Binary files](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2002)

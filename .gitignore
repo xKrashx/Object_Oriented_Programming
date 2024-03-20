@@ -30,4 +30,6 @@
 *.exe
 *.out
 *.app
-Practicum/Week 04/Fraction.h
+
+# Setup
+**/file_hashes.txt

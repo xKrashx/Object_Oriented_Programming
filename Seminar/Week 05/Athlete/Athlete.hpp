@@ -1,5 +1,5 @@
-#ifndef ATHLETE_H
-#define ATHLETE
+#ifndef __ATHLETE_H
+#define __ATHLETE
 
 class Athlete{
 

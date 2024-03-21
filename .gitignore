@@ -31,5 +31,7 @@
 *.out
 *.app
 
+.vscode
+
 # Setup
 **/file_hashes.txt

@@ -55,7 +55,7 @@ unsigned int Classroom::GetStudentNumber(Student &student)
     }
     return 0;
 };
-
+ 
 Student Classroom::GetStudentByNumber(unsigned int number)
 {
     for (size_t i = 0; i < NUM_OF_STUDENTS; i++)

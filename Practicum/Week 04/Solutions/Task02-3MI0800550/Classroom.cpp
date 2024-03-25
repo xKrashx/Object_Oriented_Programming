@@ -4,11 +4,6 @@
 Classroom::Classroom()
 {
     students = new (std::nothrow) Student[1];
-
-    // for (size_t i = 0; i < NUM_OF_STUDENTS; i++)
-    // {
-    //     this->students[i] = nullptr;
-    // }
 };
 
 void Classroom::AddStudent(Student &student)
@@ -31,7 +26,7 @@ void Classroom::AddStudent(Student &student)
     {
         new_students[i] = this->students[i];
     }
-    // Student *temp = this->students;
+
     delete[] this->students; 
     this->students = new_students;
     
@@ -43,15 +38,9 @@ void Classroom::AddStudent(Student &student)
 
 void Classroom::PrintStudents()
 {
-
     for (size_t i = 0; i < taken_places; i++)
     {
-        // if (strcmp(this->students[i].GetName(), ""))
-        // {
             std::cout << this->students[i].GetNumber() << ':' << this->students[i].GetName() << std::endl;
-        // }
-        // else
-        //     continue;
     }
 };
 

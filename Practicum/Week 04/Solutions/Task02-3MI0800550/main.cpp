@@ -37,11 +37,7 @@ int main()
     clas.PrintStudents();
     std::cout << std::endl;
     clas1.PrintStudents();
-    // student.PrintAllGrades();
-    // std::cout << "stoqns Average grade is: " << student.GetAverageGrade() << std::endl;
-    
-    // student.PrintAllGrades();
-    // std::cout << student.GetName () << std::endl;
+
     
 
     return 0;

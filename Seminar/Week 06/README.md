@@ -40,6 +40,7 @@ Test doSomethingElseWithTest(Test t) // Извиква копиращ конст
 int main()
 {
     Test t, t1(t), t2 = t1; // t1 и t2 извикват копиращ конструктор
+    return 0;
 }
 ```
 
@@ -79,6 +80,7 @@ int main()
     Test t, t1(t), t2 = t1;
     t = t1;
     t = t1 = t2; // еквивалентно на t.operator=(t1.operator=(t2));
+    return 0;
 }
 ```
 
@@ -224,8 +226,10 @@ int main()
 	f(number); // OK!
 	f(ref);    // OK!
 	f(3);      // Error!
+    return 0;
 }
 ```
+
 "Висящата" константа 3 **няма адрес в паметта**. За това подаването и като параметър на функцията f ще доведе до компилационна грешка. 
 
 **&&** - за стойности без адрес в паметта
@@ -233,7 +237,7 @@ int main()
 <h5>Пример за използването на lvalue:</h5>
 
 ```c++
-#include<iostream>
+#include <iostream>
 
 void f(int&& n)
 {
@@ -242,17 +246,52 @@ void f(int&& n)
 
 int main()
 {
-	int number = 10;
-    int &ref = number;
-    int &&rvalueRef = number; // Error!
-    int &&rvalue = 2;         // OK!
-	f(number);                // Error!
-	f(rvalue);                // OK!
-	f(3);                     // OK!
+	int number = 10;                    // OK!
+    int &ref = number;                  // OK!
+    int &&rvalueRef = number;           // Error!
+    int &&rvalueRef = (int &&)number;   // OK!
+    int &&rvalue = 2;                   // OK!
+	f(number);                          // Error!
+	f(rvalue);                          // Error!
+	f((int &&)number);                  // OK!
+	f((int &&)rvalue);                  // OK!
+	f(3);                               // OK!
+    return 0;
 }
 ```
 
 Тук грешката възниква при подаването на променлива, която **има адрес в паметта**.
+
+Вместо ръчно да кастваме към rvalue reference, можем да използваме стандартната функция std::move, която го прави вместо нас и работи за всякакви типове.
+
+```c++
+#include <iostream>
+
+void f(int &&n)
+{
+    std::cout << n << '\n';
+}
+
+int main()
+{
+    int number = 10;
+    f(std::move(number));
+    return 0;
+}
+```
+
+Друга полезна функция, която можем да използваме за move семантики е std::exchange. Функцията приема два аргумента като им разменя стойностите и връща оригиналната. Пример за употреба:
+
+```c++
+int main()
+{
+    char *name1 = new(std::nothrow) char[10];
+    if(!name1) return;
+    char *name2 = std::exchange(name1, nullptr); // -> name2 = адреса, който е имал name1, а name1 = nullptr.
+    delete[] name2;
+    return 0;
+}
+```
 
 <h3>Излишни копия?</h3>
 

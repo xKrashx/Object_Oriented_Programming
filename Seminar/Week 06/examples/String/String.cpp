@@ -65,7 +65,7 @@ char const *String::c_str() const{
     return str;
 }
 size_t String::Length() const{
-    return strlen(str);
+    return size;
 }
 
 void String::Append(char const *str){

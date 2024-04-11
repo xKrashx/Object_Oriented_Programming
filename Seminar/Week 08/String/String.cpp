@@ -31,13 +31,7 @@ String &String::operator =(String const &other){
 
     if(this == &other) return *this;
 
-    Free();
-    try{
-        Copy(other);
-    }
-    catch(std::bad_alloc const &ex){
-        std::cerr << ex.what() << '\n';
-    }
+    *this = String(other);
 
     return *this;
 

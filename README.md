@@ -9,6 +9,7 @@
 ### [:six: Copy & Move semantics, Constructor specifiers, RVO](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2006)
 ### [:seven: Exceptions, Keyword friend, Keyword mutable, Static fields and methods](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2007)
 ### [:eight: Operators, Collections of pointers to objects](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2008)
+### [:nine: Forward declaration, Inheritance](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2008)
 
 ## :pushpin: Contents by weeks (Practicum):
 ### [:one: Structs, Padding and size, Unions, Enums](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2001)

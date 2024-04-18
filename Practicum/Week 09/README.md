@@ -56,11 +56,12 @@ void Point::SetY(int y) {
 void Point::Print(std::ostream& os) const {
     // TODO: Implement Print method
 }
-```
 
 double Point::DistanceTo(const Point& other) const {
     // TODO: Implement DistanceTo method
 }
+```
+
 Да се реализира клас `Triangle`, който има член-данни 3 точки.
 Да се напишат:
 - конструктор с параметри;

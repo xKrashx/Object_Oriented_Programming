@@ -19,7 +19,7 @@
 ### [:five: Life cycle of objects](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2005)
 ### [:six: Copy and Move semantics](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2006)
 ### [:seven: Exceptions, Keyword friend, Static fields and methods](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2007)
-### [:eight: Redefining operators](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2008)
+### [:eight: Operator overloading](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2008)
 ### [:nine: Inheritance](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2009)
 
 ## :books: Notion materials:

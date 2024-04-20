@@ -82,9 +82,12 @@ double Point::DistanceTo(const Point& other) const {
 За всички тях да се напишат: 
 - подходящи конструктори;
 - собствени реализации на методите `Print`, `GetArea`, `GetPerimeter`.
+### Схема на йерархията:
+<br>![](https://github.com/xKrashx/Object_Oriented_Programming/blob/main/Practicum/Week%2009/img/Hierarchy.png?raw=true)
 
-***Забележки:*** 
+<br>***Забележки:*** 
 <br>Да се използват познатите формули за намиране на лице за съответните фигури, а не разделянето на два триъгълника.
 Помислете за лесен начин за намиране на височините на необходимите места, както е показано на примера с трапеца по-долу:
-<br>![](https://github.com/xKrashx/Object_Oriented_Programming/blob/main/Practicum/Week%2009/img/435384684_239025919303923_4324171841539782751_n.png?raw=true)
+<br>![](https://github.com/xKrashx/Object_Oriented_Programming/blob/main/Practicum/Week%2009/img/Height.png)
+
 

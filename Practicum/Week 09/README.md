@@ -12,44 +12,44 @@
 class Point {
 public:
     Point();
-    Point(int x, int y);
+    Point(double x, double y);
 
-    int GetX() const;
-    int GetY() const;
+    double GetX() const;
+    double GetY() const;
 
-    void SetX(int x);
-    void SetY(int y);
+    void SetX(double x);
+    void SetY(double y);
 
-    void Print(std::ostream& os) const;
+    void Print(std::ostream& os = std::cout) const;
 
     double DistanceTo(const Point& other) const;
 
 private:
-    int x; 
-    int y; 
+    double x; 
+    double y; 
 };
 
 Point::Point() {
     // TODO: Implement default constructor
 }
 
-Point::Point(int x, int y) {
+Point::Point(double x, double y) {
     // TODO: Implement constructor with parameters
 }
 
-int Point::GetX() const {
+double Point::GetX() const {
     // TODO: Implement GetX method
 }
 
-int Point::GetY() const {
+double Point::GetY() const {
     // TODO: Implement GetY method
 }
 
-void Point::SetX(int x) {
+void Point::SetX(double x) {
     // TODO: Implement SetX method
 }
 
-void Point::SetY(int y) {
+void Point::SetY(double y) {
     // TODO: Implement SetY method
 }
 
@@ -81,13 +81,14 @@ double Point::DistanceTo(const Point& other) const {
 Да се реализира клас `Rhombus`, описващ ромб, клас `Rectangle`, описващ правоъгълник и клас `Square`, описващ квадрат. Те са наследници на клас `Parallelogram`. 
 За всички тях да се напишат: 
 - подходящи конструктори;
-- собствени реализации на методите `Print`, `GetArea`, `GetPerimeter`.
+- където е необходимо, собствени реализации на методите `Print`, `GetArea`, `GetPerimeter`.
 ### Схема на йерархията:
 <br>![](https://github.com/xKrashx/Object_Oriented_Programming/blob/main/Practicum/Week%2009/img/Hierarchy.png?raw=true)
 
-<br>***Забележки:*** 
-<br>Да се използват познатите формули за намиране на лице за съответните фигури, а не разделянето на два триъгълника.
-Помислете за лесен начин за намиране на височините на необходимите места, както е показано на примера с трапеца по-долу:
+### ***Забележки:*** 
+- Помислете за неточността при сравнението за равенство на числата с плаваща точка.
+- Да се използват познатите формули за намиране на лице за съответните фигури, а не разделянето на два триъгълника.
+- Помислете за лесен начин за намиране на височините на необходимите места, както е показано на примера с трапеца по-долу:
 <br>![](https://github.com/xKrashx/Object_Oriented_Programming/blob/main/Practicum/Week%2009/img/Height.png)
 
 

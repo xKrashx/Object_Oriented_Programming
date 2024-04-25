@@ -1,43 +1,51 @@
-#pragma once
-#include <iostream>
+#ifndef __SHAPE_H_
+#define __SHAPE_H_
 
-class Shape   // Abstract class - no instances of Shape are allowed!
-{
-protected:
-	struct point
-	{
-		point() :x(0), y(0){}
-		point(int x, int y) :x(x), y(y){}
-		int x;
-		int y;
-		double getDist(const point& other) const
-		{
-			int dx = x - other.x;
-			int dy = y - other.y;
+#include <cstddef>
 
-			return sqrt(dx*dx + dy*dy);
-		}
-	};
-	const point& getPointAtIndex(size_t index) const;
-private:
-	point* points;
-	size_t pointsCount;
-
-	void copyFrom(const Shape& other);
-	void free();
-
+class Shape{   // Abstract class - no instances of Shape are allowed!
 
 public:
-	Shape(size_t pointsCount);
+	Shape(size_t const pointsCount);
 
-	Shape(const Shape& other);
-	Shape& operator=(const Shape& other);
+	Shape(Shape const &other);
+	Shape(Shape &&other);
+
 	virtual ~Shape(); //!!!!!!
 
-	void setPoint(size_t pointIndex, int x, int y);
+	Shape &operator =(Shape const &other);
+	Shape &operator =(Shape &&other);
 
-	virtual double getArea() const = 0; //pure virtual
-	virtual double getPer()  const = 0; // pure virtual
-	virtual bool isPointIn(int x, int y) const = 0;
+public:
+	void SetPoint(size_t pointIndex, int x, int y);
+
+	virtual double GetArea() const = 0; //pure virtual
+	virtual double GetPer()  const = 0; // pure virtual
+	virtual bool IsPointIn(int x, int y) const = 0;
+
+protected:
+	struct Point{
+
+		Point() = default;
+		Point(int x, int y): x(x), y(y){}
+
+		double GetDistance(Point const other) const;
+
+		int x = 0, y = 0;
+
+	};
+
+	Point const GetPointAtIndex(size_t index) const;
+
+private:
+	void Copy(Shape const &other);
+	void Move(Shape &&other);
+	void Free();
+
+private:
+	Point* m_Points;
+	size_t m_NumberOfPoints;
 
 };
+
+#endif

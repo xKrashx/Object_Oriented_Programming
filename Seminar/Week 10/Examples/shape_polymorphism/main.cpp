@@ -1,52 +1,55 @@
 ﻿#include <iostream>
-using namespace std;
 
 #include "Rectangle.h"
 #include "Circle.h"
 #include "Triangle.h"
 
+void PrintAreas(Shape const **shapes, size_t shapesCount){
 
-void printAreas(const Shape* const * shapes, size_t shapesCount)
-{
-	for (int i = 0; i < shapesCount; i++)
-		cout << shapes[i]->getArea() <<endl;
+	for(size_t i = 0; i < shapesCount; ++i)
+		std::cout << shapes[i]->GetArea() << '\n';
 }
-void printPers(const Shape* const * shapes, size_t shapesCount)
-{
-	for (int i = 0; i < shapesCount; i++)
-		cout << shapes[i]->getPer() << endl;
-}
+void PrintPers(Shape const **shapes, size_t shapesCount){
 
-void checkPointIn(const Shape* const* shapes, size_t shapesCount, int x, int y)
-{
-	for (int i = 0; i < shapesCount; i++)
-		cout << shapes[i]->isPointIn(x,y) << endl;
+	for(size_t i = 0; i < shapesCount; ++i)
+		std::cout << shapes[i]->GetPer() << '\n';
+
 }
 
-void freeCollection(Shape** shapes, size_t shapesCount)
-{
-	for (int i = 0; i < shapesCount; i++)
-			delete shapes[i];
-		delete[] shapes;
+void CheckPointIn(Shape const **shapes, size_t shapesCount, int x, int y){
+
+	for(size_t i = 0; i < shapesCount; ++i)
+		std::cout << shapes[i]->IsPointIn(x,y) << '\n';
+
 }
 
-int main()
-{
-		Shape** arr = new Shape*[4];
+void FreeCollection(Shape const **shapes, size_t shapesCount){
 
-		arr[0] = new Rectangle(3, 4, 6, 8);
-		arr[1] = new Circle(3, 3, 4);
-		arr[2] = new Circle(1, 4, 5);
-		arr[3] = new Triangle(1, 1, 2, 2, 3, 3);
+	for(size_t i = 0; i < shapesCount; ++i)
+		delete shapes[i];
+	delete[] shapes;
 
-		printAreas(arr, 4);
-		std::cout << endl;
-		printPers(arr, 4);
-		std::cout << endl;
+}
 
-		checkPointIn(arr, 4, 3, 3);
-		
+int main(){
 
-		freeCollection(arr, 4);
+	Shape **arr = new Shape *[4];
+
+	arr[0] = new Rectangle(3, 4, 6, 8);
+	arr[1] = new Circle(3, 3, 4);
+	arr[2] = new Circle(1, 4, 5);
+	arr[3] = new Triangle(1, 1, 2, 2, 3, 3);
+
+	PrintAreas(arr, 4);
+	std::cout << '\n';
+
+	PrintPers(arr, 4);
+	std::cout << '\n';
+
+	CheckPointIn(arr, 4, 3, 3);
+
+	FreeCollection(arr, 4);
+
+	return 0;
 	
 }

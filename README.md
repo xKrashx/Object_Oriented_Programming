@@ -22,6 +22,7 @@
 ### [:seven: Exceptions, Keyword friend, Static fields and methods](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2007)
 ### [:eight: Operator overloading](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2008)
 ### [:nine: Inheritance](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2009)
+### [:one::zero: Virtual functions, Virtual tables, Abstract classes, Polymorphism, Diamond problem](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2010)
 
 ## :books: Notion materials:
 ### [Theory, materials, examples and quick videos to explain concepts](https://www.notion.so/2263ae863b004076961ead3e357125aa)

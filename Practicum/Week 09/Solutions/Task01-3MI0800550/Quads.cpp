@@ -1,6 +1,6 @@
 #include "Quads.hpp"
 
-Trapezoid::Trapezoid(Point &A, Point &B, Point &C, Point &D)
+Trapezoid::Trapezoid(Point A, Point B, Point C, Point D)
 {
     Point AB = A.CreateVector(B);
     Point CD = C.CreateVector(D);
@@ -21,7 +21,7 @@ Trapezoid::Trapezoid(Point &A, Point &B, Point &C, Point &D)
     }
 }
 
-Parallelogram::Parallelogram(Point &A, Point &B, Point &C, Point &D)
+Parallelogram::Parallelogram(Point A, Point B, Point C, Point D)
 {
     Point AB = A.CreateVector(B);
     Point CD = C.CreateVector(D);
@@ -39,20 +39,22 @@ Parallelogram::Parallelogram(Point &A, Point &B, Point &C, Point &D)
         throw std::invalid_argument("Opposite sides must be parallel");
 }
 
-Rhombus::Rhombus(Point &A, Point &B, Point &C, Point &D)
+Rhombus::Rhombus(Point A, Point B, Point C, Point D)
 {
     Point AB = A.CreateVector(B);
     Point CD = C.CreateVector(D);
     Point BC = B.CreateVector(C);
     Point AD = A.CreateVector(D);
 
+    std::cout << AB.VectorLen() << ' '<< CD.VectorLen()<< ' ' << BC.VectorLen()<< " " << AD.VectorLen() << std::endl;
+
     Point AC = A.CreateVector(C);
     Point BD = B.CreateVector(D);
 
-    if (AB.VectorLen() == CD.VectorLen() &&
-        CD.VectorLen() == BC.VectorLen() &&
-        BC.VectorLen() == AD.VectorLen() &&
-        AD.VectorLen() == AB.VectorLen())
+    if (abs(AB.VectorLen() - CD.VectorLen()) < 0.001 &&
+        abs(CD.VectorLen() - BC.VectorLen()) < 0.001 &&
+        abs(BC.VectorLen() - AD.VectorLen()) < 0.001 &&
+        abs(AD.VectorLen() - AB.VectorLen()) < 0.001)
     {
 
         if (AB.CheckForCollinearity(CD) && BC.CheckForCollinearity(AD))
@@ -76,7 +78,7 @@ Rhombus::Rhombus(Point &A, Point &B, Point &C, Point &D)
         throw std::invalid_argument("Sides must be equal");
 }
 
-Rectangle::Rectangle(Point &A, Point &B, Point &C, Point &D)
+Rectangle::Rectangle(Point A, Point B, Point C, Point D)
 {
     Point AB = A.CreateVector(B);
     Point CD = C.CreateVector(D);
@@ -94,7 +96,7 @@ Rectangle::Rectangle(Point &A, Point &B, Point &C, Point &D)
         throw std::invalid_argument("Sides must be perpendicular");
 }
 
-Square::Square(Point &A, Point &B, Point &C, Point &D)
+Square::Square(Point A, Point B, Point C, Point D)
 {
     Point AB = A.CreateVector(B);
     Point CD = C.CreateVector(D);

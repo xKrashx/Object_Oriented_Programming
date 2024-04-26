@@ -18,9 +18,16 @@ double Triangle::GetArea() const
     double p = P / 2;
     return sqrt(p * (p - A) * (p - B) * (p - C));
 }
+double Triangle::GetPerimeter() const
+{
+    return a.DistanceTo(b) + b.DistanceTo(c) + c.DistanceTo(a);
+}
 void Triangle::Print(std::ostream &os)
 {
-    os << "A: ";a.Print(os);
-    os << "B: ";b.Print(os);
-    os << "C: ";c.Print(os);
+    os << "A: ";
+    a.Print(os);
+    os << "B: ";
+    b.Print(os);
+    os << "C: ";
+    c.Print(os);
 };

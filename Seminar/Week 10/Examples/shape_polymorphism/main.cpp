@@ -4,26 +4,26 @@
 #include "Circle.h"
 #include "Triangle.h"
 
-void PrintAreas(Shape const **shapes, size_t shapesCount){
+void PrintAreas(Shape **shapes, size_t shapesCount){
 
 	for(size_t i = 0; i < shapesCount; ++i)
 		std::cout << shapes[i]->GetArea() << '\n';
 }
-void PrintPers(Shape const **shapes, size_t shapesCount){
+void PrintPers(Shape **shapes, size_t shapesCount){
 
 	for(size_t i = 0; i < shapesCount; ++i)
 		std::cout << shapes[i]->GetPer() << '\n';
 
 }
 
-void CheckPointIn(Shape const **shapes, size_t shapesCount, int x, int y){
+void CheckPointIn(Shape **shapes, size_t shapesCount, int x, int y){
 
 	for(size_t i = 0; i < shapesCount; ++i)
 		std::cout << shapes[i]->IsPointIn(x,y) << '\n';
 
 }
 
-void FreeCollection(Shape const **shapes, size_t shapesCount){
+void FreeCollection(Shape **shapes, size_t shapesCount){
 
 	for(size_t i = 0; i < shapesCount; ++i)
 		delete shapes[i];

@@ -13,6 +13,7 @@
 ### [:one::zero: Virtual functions, Virtual tables, Abstract classes, Polymorphism, Diamond problem](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2010)
 ### [:one::one: Heterogenous containers, Factory pattern, Templates](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2011)
 ### [:one::two: Recursive Polymorphic structures](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2012)
+### [:one::three: SOLID principles and type casting](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2013)
 
 ## :pushpin: Contents by weeks (Practicum):
 ### [:one: Structs, Padding and size, Unions, Enums](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2001)

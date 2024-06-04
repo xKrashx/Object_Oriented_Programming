@@ -29,6 +29,7 @@
 ### [:one::zero: Virtual functions, Virtual tables, Abstract classes, Polymorphism, Diamond problem](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2010)
 ### [:one::one: Heterogenous containers, Factory pattern, Templates](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2011)
 ### [:one::two: Templates, Recursive polymorphic structures](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2012)
+### [:one::four: Templates, Recursive polymorphic structures](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2014)
 
 ## :books: Notion materials:
 ### [Theory, materials, examples and quick videos to explain concepts](https://www.notion.so/2263ae863b004076961ead3e357125aa)

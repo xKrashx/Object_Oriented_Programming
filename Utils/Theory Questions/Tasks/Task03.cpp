@@ -5,7 +5,7 @@
 
 #include <iostream>
 
-template <typename T> T add(T a, T b)
+template <typename T> T add(const T& a, const T& b)
 {
     return a + b;
 }

@@ -1,0 +1,24 @@
+#pragma once
+//file name: String.h
+class String {
+public:
+	String();
+	String(size_t str_size);				//constructors and destructor
+	String(const String& other);
+	~String();
+
+
+	void Append(const String &other);
+	String Combine(const String &other);
+	char*const c_str()const;
+	unsigned int Length()const;
+	void Clear();
+	bool Empty()const;
+	char At(const size_t i)const;
+
+
+	size_t capacity;
+	char* ch;
+private:
+	
+};

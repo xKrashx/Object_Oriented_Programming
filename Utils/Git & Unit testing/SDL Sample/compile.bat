@@ -1,1 +1,0 @@
-g++ *.cpp -o main.exe -Ipath/to/SDL/include -Lpath/to/SDL/lib -lSDL2

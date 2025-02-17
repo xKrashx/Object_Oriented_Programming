@@ -1,5 +1,6 @@
 # Object Oriented Programming 2024/2025
 ## :computer: Course for Computer Science students at FMI Sofia University
 ## :pushpin: Contents by weeks (Seminar):
+### [:one: Revision & C++ specifics, Structs, Padding and object sizes, Unions, Enums, Namespaces, Anonymous](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2001)
 
 ## :pushpin: Contents by weeks (Practicum):

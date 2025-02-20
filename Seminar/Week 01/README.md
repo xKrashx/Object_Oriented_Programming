@@ -402,6 +402,65 @@ int main()
 
 ![enter image description here](https://i.ibb.co/nsCKYLN/struct.png)
 
+<h3>Битови полета</h3>
+
+Битовите полета са механизъм за по-конкретно разпределяне на паметта на една структура.
+
+Пример за употреба:
+
+```c++
+struct A
+{
+	unsigned b : 3; // b can hold a 3 bit unsigned value [0,7]
+};
+```
+
+Ако създадем обект от тип A, можем да достъпваме полето b както всички други полета, но в него можем да записваме само стойности, които се побират в 3 бита. С други думи b може да приема стойности от 0 до 7 включително. Друго интересно нещо, е че обектът от тип A ще има размер 4 байта при създаване. Това се дължи на факта, че заделяме място за unsigned int, но на практика разрешаваме да се използват само 3 бита от него.
+
+Как можем да разпределяме пространството по-ефективно:
+
+```c++
+struct A
+{
+	// will usually occupy 2 bytes:
+    unsigned char b1 : 3; // 1st 3 bits (in 1st byte) are b1
+    unsigned char    : 2; // next 2 bits (in 1st byte) are blocked out as unused
+    unsigned char b2 : 6; // 6 bits for b2 - doesn't fit into the 1st byte => starts a 2nd
+    unsigned char b3 : 2; // 2 bits for b3 - next (and final) bits in the 2nd byte
+};
+
+struct B
+{
+    // will usually occupy 2 bytes:
+    // 3 bits: value of b1
+    // 5 bits: unused
+    // 2 bits: value of b2
+    // 6 bits: unused
+    unsigned char b1 : 3;
+    unsigned char : 0; // start a new byte
+    unsigned char b2 : 2;
+};
+```
+
+Примерна употреба:
+
+```c++
+int main()
+{
+	std::cout << sizeof(S) << '\n'; // usually prints 2
+ 
+    A a;
+    // set distinguishable field values
+    a.b1 = 0b111;
+    a.b2 = 0b101111;
+    a.b3 = 0b11;
+
+	// Saved value: 1110000011110111
+
+	return 0;
+}
+```
+
 <h3>Unions (Обединения)</h3>
 
 Обединенията са част от паметта, която се поделя при съхранение на две или повече променливи. Променливите, поделящи паметта могат да са от различни типове. Във всеки един момент обаче може да се ползва само една променлива от състава на обединението.

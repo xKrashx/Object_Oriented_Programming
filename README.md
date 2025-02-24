@@ -5,3 +5,4 @@
 ### [:two: File streams, text and binary files](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2002)
 
 ## :pushpin: Contents by weeks (Practicum):
+### [:one: Enums, Namespaces](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2001)

@@ -1,5 +1,6 @@
 #include "smartcity.hpp"
 #include <iostream>
+#include <cstring>
 
 // Function to display menu and get choice
 int getMenuChoice() {
@@ -27,7 +28,7 @@ void handleSingleBuilding() {
     printBuildingInfo(building);
     
     std::cout << "\n=== Saving Building to Binary File ===\n";
-    if (saveBuildingToFile(building, "building.bin")) {
+    if (saveBuildingToFile(building, strcat(building.name, ".bin"))) {
         std::cout << "Building saved successfully to \"building.bin\"\n";
     }
 }
@@ -35,13 +36,19 @@ void handleSingleBuilding() {
 // Function to demonstrate loading a single building
 void handleLoadBuilding() {
     Building building;
+    std::string filename;
     
     std::cout << "\n=== Loading Building from Binary File ===\n";
-    if (loadBuildingFromFile(building, "building.bin")) {
-        std::cout << "Building loaded successfully from \"building.bin\"\n";
+    std::cout << "Enter the filename to load from: ";
+    std::cin >> filename;
+    
+    if (loadBuildingFromFile(building, filename.c_str())) {
+        std::cout << "Building loaded successfully from \"" << filename << "\"\n";
         
         std::cout << "\n=== Loaded Building Information ===\n";
         printBuildingInfo(building);
+    } else {
+        std::cout << "Failed to load building from \"" << filename << "\". Please check the filename and ensure the file exists.\n";
     }
 }
 

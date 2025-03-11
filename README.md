@@ -9,3 +9,4 @@
 ### [:one: Enums, Namespaces](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2001)
 ### [:two: Structs, bit fields](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2002)
 ### [:three: Text files](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2003)
+### [:four: Binary files](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2004)

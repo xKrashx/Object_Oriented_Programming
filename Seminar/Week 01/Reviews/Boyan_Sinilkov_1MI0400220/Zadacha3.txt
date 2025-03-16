@@ -1,0 +1,64 @@
+#include <iostream>
+
+const int MIN_NUMBER_VALUE = -1000;
+const int MAX_NUMBER_VALUE = 1000;
+
+struct ComplexNum {
+    double Re, Im;
+
+    ComplexNum add(const ComplexNum& other) const { 
+        return { Re + other.Re, Im + other.Im };
+    }
+
+    ComplexNum subtract(const ComplexNum& other) const {
+        return { Re - other.Re, Im - other.Im };
+    }
+
+    ComplexNum multiply(const ComplexNum& other) const {
+        return { Re * other.Re - Im * other.Im, Re * other.Im + Im * other.Re };
+    }
+};
+
+void printComplexNum(const ComplexNum& num) {
+    if (num.Im == 0) {
+        std::cout << num.Re << std::endl;
+    }
+    else if (num.Re == 0) {
+        std::cout << num.Im << "i" << std::endl;
+    }
+    else {
+        std::cout << num.Re;
+        if (num.Im > 0) std::cout << "+";
+        std::cout << num.Im << "i" << std::endl;
+    }
+}
+
+bool isValid(double n) { 
+    return n >= MIN_NUMBER_VALUE && n <= MAX_NUMBER_VALUE;
+}
+
+double getValidNum() {
+    double n;
+    do {
+        std::cin >> n;
+        if (!isValid(n)) {
+            std::cout << "Bad numbers. Min:  " << MIN_NUMBER_VALUE << " Max: " << MAX_NUMBER_VALUE << std::endl;
+        }
+    } while (!isValid(n));
+    return n;
+}
+
+int main() {
+    ComplexNum z1, z2;
+
+    z1.Re = getValidNum();
+    z1.Im = getValidNum();
+    z2.Re = getValidNum();
+    z2.Im = getValidNum();
+
+    printComplexNum(z1.add(z2));
+    printComplexNum(z1.subtract(z2));
+    printComplexNum(z1.multiply(z2));
+
+    return 0;
+}

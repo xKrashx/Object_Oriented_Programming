@@ -1,0 +1,62 @@
+#include <iostream>
+#include <cmath>
+
+const double MIN_NUMBER_VALUE = -100;
+const double MAX_NUMBER_VALUE = 100;
+
+struct QuadraticEq {
+    double a, b, c;
+
+    void solve() {
+        if (a == 0) { //тогава не е квадратно.
+            std::cout << "The equation does not have real solutions!" << std::endl;
+            return;
+        }
+
+        double D = b * b - 4 * a * c;
+
+        if (D < 0) {
+            std::cout << "The equation does not have real solutions!" << std::endl;
+        }
+        else if (D == 0) {
+            double x = (-1 * b) / (2 * a);
+            std::cout << "x1 = x2 = " << x << std::endl;
+        }
+        else {
+            double x1 = (-1 * b - std::sqrt(D)) / (2 * a);
+            double x2 = (-1 * b + std::sqrt(D)) / (2 * a);
+            if (x1 > x2) { 
+                double temp = x1;
+                x1 = x2;
+                x2 = temp;
+            }
+            std::cout << "x1 = " << x1 << ", x2 = " << x2 << std::endl;
+        }
+    }
+};
+
+bool isValid(double n) {
+    return n >= MIN_NUMBER_VALUE && n <= MAX_NUMBER_VALUE;
+}
+
+double getValidNum() {
+    double n;
+    do {
+        std::cin >> n;
+        if (!isValid(n)) {
+            std::cout << "Bad numbers. Min:  " << MIN_NUMBER_VALUE << " Max: " << MAX_NUMBER_VALUE << std::endl;
+        }
+    } while (!isValid(n));
+    return n;
+}
+
+int main() {
+    QuadraticEq equation;
+
+    equation.a = getValidNum();
+    equation.b = getValidNum();
+    equation.c = getValidNum();
+
+    equation.solve();
+    return 0;
+}

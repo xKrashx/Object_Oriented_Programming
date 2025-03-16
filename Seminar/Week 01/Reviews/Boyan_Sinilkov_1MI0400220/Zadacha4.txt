@@ -1,0 +1,93 @@
+#include <iostream>
+
+const int MIN_STUDENTS = 1;
+const int MAX_STUDENTS = 500;
+const int MIN_FACULTY_NUMBER = 10000;
+const int MAX_FACULTY_NUMBER = 99999;
+const int MIN_COURSE = 1;
+const int MAX_COURSE = 4;
+const double MIN_GRADE = 2.0;
+const double MAX_GRADE = 6.0;
+
+struct Student {
+    unsigned int fn : 29; // 100000 се представя със 17 бита. не ми трабва всичките
+    // Ако си решил да го правиш с битови полета на теория можеш да си спестиш 1 бит от course.
+    // С други думи да използваш 2 бита с четирите стойности: 00, 01, 10, 11
+    // Просто курсовете ще са ти номерирани с 1 по-малко от истинската номерация(0 ще отговаря на 1).
+    unsigned int course : 3; // максималното число е 4 което е 100 бинарно -> имам нужда от 3 бита
+    float avgGrade; // използвам float понеже реално не ми трябва голяма точност и така студента е 8 байта.
+};
+
+void initStudent(Student& student) {
+    unsigned int temp;
+    do {
+        std::cin >> temp;
+    } while (temp < MIN_FACULTY_NUMBER || temp > MAX_FACULTY_NUMBER);
+    student.fn = temp;
+
+    do {
+        std::cin >> temp;
+    } while (temp < MIN_COURSE || temp > MAX_COURSE);
+    student.course = temp;
+
+    do {
+        std::cin >> student.avgGrade;
+    } while (student.avgGrade < MIN_GRADE || student.avgGrade > MAX_GRADE);
+}
+
+void printStudent(const Student& student) {
+    std::cout << "Факултетен номер: " << student.fn << ", Курс: " << student.course << ", Среден успех: " << student.avgGrade << std::endl;
+}
+
+struct Group {
+    // Попринцип не сме ги учили, но това не означава, че не можеш в някоя външна функция да заделиш и да изтриеш паметта.
+    Student students[MAX_STUDENTS]; //статично зашото още не сме учили конструктори и деструктори
+    short size;
+    float avgGroupGrade;
+};
+
+void calcAvg(Group& group) { 
+    float total = 0;
+    for (int i = 0; i < group.size; i++) {
+        total += group.students[i].avgGrade;
+    }
+    group.avgGroupGrade = total / group.size;
+}
+
+short countScolarships(const Group& group, float minGrade) {
+    short count = 0;
+    for (int i = 0; i < group.size; i++) {
+        if (group.students[i].avgGrade >= minGrade) {
+            count++;
+        }
+    }
+    return count;
+}
+
+short getGroupSize() {
+    short n;
+    do {
+        std::cin >> n;
+    } while (n < MIN_STUDENTS || n > MAX_STUDENTS);
+    return n;
+}
+
+int main() {
+    Group g;
+    g.size = getGroupSize();
+    
+    for (int i = 0; i < g.size; i++) {
+        initStudent(g.students[i]);
+    }
+
+    calcAvg(g);
+
+    double minGrade;
+    std::cin >> minGrade;
+
+    short scholarships = countScolarships(g, minGrade);
+
+    std::cout << std::fixed << g.avgGroupGrade << " " << scholarships << std::endl;
+
+    return 0;
+}

@@ -12,6 +12,7 @@
 ### [:three: Text files](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2003)
 ### [:four: Binary files](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2004)
 ### [:five: Classes](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2005)
+### [:six: Constructors, exceptions](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2006)
 
 ## :pushpin: Additional materials and resources:
 ### [:bug: How to debug multiple C++ source files in VSCode](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Misc/Tutorials)

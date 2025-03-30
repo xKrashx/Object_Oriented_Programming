@@ -6,6 +6,7 @@
 ### [:three: Multiple file compilation and libraries](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2003)
 ### [:four: Methods, this keyword, Classes, Access modifiers and Encapsulation](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2004)
 ### [:five: Default and Parametrized Constructors, Destructors, Initializing list, Exceptions](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2005)
+### [:six: Copy & Move semantics, Constructor specifiers, RVO](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2006)
 
 ## :pushpin: Contents by weeks (Practicum):
 ### [:one: Enums, Namespaces](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2001)

@@ -8,7 +8,7 @@
 ### [:five: Default and Parametrized Constructors, Destructors, Initializing list, Exceptions](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2005)
 ### [:six: Copy & Move semantics, Constructor specifiers, RVO](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2006)
 ### [:seven: Keyword friend, Keyword mutable, Static fields and methods](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2007)
-### [:eight: Keyword friend, Keyword mutable, Static fields and methods](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2007)
+### [:eight: Operators, Collections of pointers to objects](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2008)
 
 ## :pushpin: Contents by weeks (Practicum):
 ### [:one: Enums, Namespaces](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2001)

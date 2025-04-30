@@ -20,7 +20,8 @@
 ### [:six: Constructors, exceptions](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2006)
 ### [:seven: Move semantics, const data types](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2007)
 ### [:eight: Static, const](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2008)
-### [:nine: Operator overloading part 1](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2009)
+### [:nine: Operator overloading](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2009)
+### [:one::zero: Inheritance](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2010)
 
 ## :pushpin: Additional materials and resources:
 ### [:bug: How to debug multiple C++ source files in VSCode](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Misc/Tutorials)

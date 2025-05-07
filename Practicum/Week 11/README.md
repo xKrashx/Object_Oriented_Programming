@@ -115,15 +115,8 @@ public:
 
 ### Подробна визуализация в текстов файл
 ```bash
-g++ -fdump-class-hierarchy character.cpp astrologer.cpp confessor.cpp spell.cpp spell_types.cpp main.cpp -o elder_thing
+g++ -g -fdump-lang-class inheritance.cpp -o inheritance
 ```
-Тази команда ще създаде файлове с разширение `.class` за всеки клас, съдържащи подробна информация за виртуалните таблици.
-
-### Опростена визуализация в терминала
-```bash
-g++ -fdump-lang-class character.cpp astrologer.cpp confessor.cpp spell.cpp spell_types.cpp main.cpp -o elder_thing
-```
-Тази команда ще покаже по-опростена информация за виртуалните таблици директно в терминала.
 
 ## Примерни разширения
 - Добавяне на интерфейси (абстрактни класове) за дефиниране на общо поведение

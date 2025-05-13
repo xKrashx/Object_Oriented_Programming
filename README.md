@@ -23,7 +23,8 @@
 ### [:eight: Static, const](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2008)
 ### [:nine: Operator overloading](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2009)
 ### [:one::zero: Inheritance](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2010)
-### [:one::two: Virtual functions, tables, polymorphism](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2011)
+### [:one::one: Virtual functions, tables, polymorphism](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2011)
+### [:one::two: Midterm 2 practice](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2012)
 
 ## :pushpin: Additional materials and resources:
 ### [:bug: How to debug multiple C++ source files in VSCode](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Misc/Tutorials)

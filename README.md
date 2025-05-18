@@ -11,6 +11,7 @@
 ### [:eight: Operators, Collections of pointers to objects](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2008)
 ### [:nine: Forward declaration, Inheritance](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2009)
 ### [:one::zero: Virtual functions, Virtual tables, Abstract classes, Polymorphism, Diamond problem](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2010)
+### [:one::one: Heterogenous containers, Factory pattern, Templates](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Seminar/Week%2011)
 
 ## :pushpin: Contents by weeks (Practicum):
 ### [:one: Enums, Namespaces](https://github.com/xKrashx/Object_Oriented_Programming/tree/main/Practicum/Week%2001)
